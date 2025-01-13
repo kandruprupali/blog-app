@@ -1,0 +1,46 @@
+/* navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* background-color: #333; Set the background color */
+    /* color: white; */
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Add space between the links */
+  }
+  
+  .navLinks li {
+    display: inline;
+  }
+  
+  .navLinks a {
+    /* color: white; */
+    text-decoration: none;
+  }
+  
+  .navLinks a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navLinks {
+      flex-direction: column;
+      display: none; /* Hide links by default */
+    }
+  
+    .navbar:hover .navLinks {
+      display: flex; /* Show links on hover */
+    }
+  }
+  
