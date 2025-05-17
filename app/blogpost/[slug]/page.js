@@ -12,17 +12,12 @@ import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from '@rehype-pretty/transformers'
 
 export default async function Page({ params }) {
-  // const slug = (await params).slug
-  // const blog = {
-  //   title: "Sample Blog Title",
-  //   author: "John Doe",
-  //   description: "This is a sample blog post.",
-  //   date: "2023-10-01",
-  //   content:
-  //     "<p>This is <strong>dangerously</strong> set inner HTML content.</p>",
-  // };
+ 
 
-   const filepath=`content/${params.slug}.md`
+
+   const filepath=`content/${params.slug}.md`;
+   console.log(filepath);
+   
    if(!fs.existsSync(filepath))
    {
       notFound()
@@ -73,3 +68,4 @@ export default async function Page({ params }) {
     </div>
   );
 }
+
